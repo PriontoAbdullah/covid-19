@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Covid - 19 | Corona </title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <section id="covid">
+        <h1>
+            Covid - 19 <br> <br>
+            <h1 class="ityped"></h1>
+        </h1>
+    </section>
+    <script type="text/javascript" src="js/ityped.js"></script>
+    <script type="text/javascript">
+        window.ityped.init(document.querySelector('.ityped'), {
+            strings: ['Please Stay Home', 'Pray Allah', 'Please Stay Safe'],
+            loop: true
+        })
+    </script>
+    <section>
+        <div id="particles-js">
+
+        </div>
+    </section>
+    <script type="text/javascript">
+        document.addEventListener("mousemove", function(e) {
+            var body = document.querySelector('body');
+            var covid_19 = document.createElement("span");
+            var x = e.offsetX;
+            var y = e.offsetY;
+            covid_19.style.left = x + 'px';
+            covid_19.style.top = y + 'px';
+            var size = Math.random() * 80;
+            covid_19.style.width = 10 + size + 'px';
+            covid_19.style.height = 10 + size + 'px';
+            body.appendChild(covid_19);
+
+            setTimeout(function() {
+                covid_19.remove();
+            }, 2000)
+        })
+    </script>
+
+    <script src='js/particles.js'></script>
+    <!-- <script src='js/stats.js'></script>-->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

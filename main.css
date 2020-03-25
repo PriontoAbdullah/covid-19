@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#covid {
+    overflow: hidden;
+    height: 100vh;
+    background: whitesmoke;
+}
+
+h1 {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/01289.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+span {
+    position: absolute;
+    background: url(covid_19.png);
+    background-size: cover;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
